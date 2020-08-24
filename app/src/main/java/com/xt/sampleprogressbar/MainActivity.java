@@ -6,7 +6,10 @@ import android.graphics.drawable.ShapeDrawable;
 import android.graphics.drawable.shapes.OvalShape;
 import android.os.Bundle;
 
+import com.xt.progressbar.rangeseekbar.RangeSliderBar;
+
 public class MainActivity extends AppCompatActivity {
+    private RangeSliderBar mRangeSliderBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,5 +25,12 @@ public class MainActivity extends AppCompatActivity {
 
             mVerticalSeekBar.setMax(100);
         }*/
+
+        {
+            mRangeSliderBar = (RangeSliderBar) findViewById(R.id.RangeSliderBar);
+            mRangeSliderBar.setRangeCount(5); //设置分段的个数
+            mRangeSliderBar.setContext(this);
+            mRangeSliderBar.setTexts(new String[]{"关闭", "低", "中", "标准", "高"}); //设置分段的数据
+        }
     }
 }

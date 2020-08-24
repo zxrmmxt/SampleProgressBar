@@ -14,7 +14,7 @@
         android:indeterminateDuration="2000"
         app:layout_constraintDimensionRatio="39:39"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHeight_percent="0.28057553957"
+        app:layout_constraintHeight_percent="0.1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -34,8 +34,8 @@
         android:paddingEnd="0dp"
         android:progressDrawable="@drawable/layer_list_seekbar_progress1"
         android:splitTrack="false"
-        android:thumb="@null" />
-    <android.support.v7.widget.AppCompatSeekBar
+        android:thumb="@android:color/transparent" />
+    <androidx.appcompat.widget.AppCompatSeekBar
         android:id="@+id/seekBar1"
         android:layout_width="201dp"
         android:layout_height="wrap_content"
@@ -43,12 +43,13 @@
         android:max="100"
         android:progress="0"
         android:progressDrawable="@drawable/layer_list_seekbar_progress2"
-        android:thumb="@drawable/icon_upgrade_rad"
-        android:visibility="gone"
+        android:thumb="@mipmap/icon_upgrade_rad"
+        android:splitTrack="false"
+        android:background="@null"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/seekBar" />
-    <android.support.v7.widget.AppCompatSeekBar
+    <androidx.appcompat.widget.AppCompatSeekBar
         android:id="@+id/seekBar2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -56,7 +57,9 @@
         android:max="100"
         android:progress="0"
         android:progressDrawable="@drawable/layer_list_seekbar_progress3"
-        android:thumb="@null"
+        android:thumb="@android:color/transparent"
+        android:splitTrack="false"
+        android:background="@null"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/seekBar1"
@@ -74,10 +77,21 @@
         android:paddingEnd="0dp"
         android:progressDrawable="@drawable/layer_list_seekbar_progress4"
         android:splitTrack="false"
-        android:thumb="@null"
+        android:thumb="@android:color/transparent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/seekBar2"
         app:layout_constraintVertical_chainStyle="packed"
         app:layout_constraintWidth_percent="0.75769230" />
+
+    <com.xt.progressbar.rangeseekbar.RangeSliderBar
+        android:id="@+id/RangeSliderBar"
+        android:layout_width="0dp"
+        app:layout_constraintWidth_percent="0.5"
+        app:barHeight="4dp"
+        app:layout_constraintTop_toBottomOf="@id/seekBar3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="0dp"
+        android:layout_height="wrap_content"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

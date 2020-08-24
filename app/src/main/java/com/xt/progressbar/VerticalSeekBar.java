@@ -1,4 +1,4 @@
-package com.xt.sampleprogressbar;
+package com.xt.progressbar;
 
 import android.content.Context;
 import android.graphics.Canvas;
