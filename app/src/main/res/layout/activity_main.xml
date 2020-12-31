@@ -117,5 +117,79 @@
             app:layout_constraintTop_toBottomOf="@id/RangeSliderBar"
             app:layout_constraintVertical_chainStyle="packed"
             app:layout_constraintWidth_percent="0.92" />
+
+        <View
+            android:id="@+id/guideViewSeekBar5"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            app:layout_constraintTop_toBottomOf="@id/seekBar4"
+            android:layout_marginTop="19dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintWidth_percent="0.7"/>
+        <SeekBar
+            android:id="@+id/seekBar5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            app:layout_constraintWidth_percent="0.7"
+            android:max="4"
+            android:maxHeight="13dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:progressDrawable="@drawable/layer_list_seekbar_progress5"
+            android:splitTrack="false"
+            android:thumb="@drawable/circle_solidwhiteffffff_raduis21px"
+            app:layout_constraintTop_toBottomOf="@id/guideViewSeekBar5" />
+        <View
+            android:id="@+id/viewScale"
+            android:layout_width="1dp"
+            android:layout_height="8dp"
+            android:background="@color/colorBlack353535"
+            app:layout_constraintBottom_toBottomOf="@id/seekBar5"
+            app:layout_constraintEnd_toStartOf="@id/viewScale1"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="@id/guideViewSeekBar5"
+            app:layout_constraintTop_toTopOf="@id/seekBar5" />
+
+        <View
+            android:id="@+id/viewScale1"
+            android:layout_width="1dp"
+            android:layout_height="8dp"
+            android:background="@color/colorBlack353535"
+            app:layout_constraintBottom_toBottomOf="@id/viewScale"
+            app:layout_constraintEnd_toStartOf="@id/viewScale2"
+            app:layout_constraintStart_toEndOf="@id/viewScale"
+            app:layout_constraintTop_toTopOf="@id/viewScale" />
+
+        <View
+            android:id="@+id/viewScale2"
+            android:layout_width="1dp"
+            android:layout_height="8dp"
+            android:background="@color/colorBlack353535"
+            app:layout_constraintBottom_toBottomOf="@id/viewScale"
+            app:layout_constraintEnd_toStartOf="@id/viewScale3"
+            app:layout_constraintStart_toEndOf="@id/viewScale1"
+            app:layout_constraintTop_toTopOf="@id/viewScale" />
+
+        <View
+            android:id="@+id/viewScale3"
+            android:layout_width="1dp"
+            android:layout_height="8dp"
+            android:background="@color/colorBlack353535"
+            app:layout_constraintBottom_toBottomOf="@id/viewScale"
+            app:layout_constraintEnd_toStartOf="@id/viewScale4"
+            app:layout_constraintStart_toEndOf="@id/viewScale2"
+            app:layout_constraintTop_toTopOf="@id/viewScale" />
+
+        <View
+            android:id="@+id/viewScale4"
+            android:layout_width="1dp"
+            android:layout_height="8dp"
+            android:background="@color/colorBlack353535"
+            app:layout_constraintBottom_toBottomOf="@id/viewScale"
+            app:layout_constraintEnd_toEndOf="@id/guideViewSeekBar5"
+            app:layout_constraintStart_toEndOf="@id/viewScale3"
+            app:layout_constraintTop_toTopOf="@id/viewScale" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

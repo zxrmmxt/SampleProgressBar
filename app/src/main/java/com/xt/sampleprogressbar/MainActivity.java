@@ -1,11 +1,15 @@
 package com.xt.sampleprogressbar;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.graphics.drawable.ShapeDrawable;
 import android.graphics.drawable.shapes.OvalShape;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.SeekBar;
 
+import com.blankj.utilcode.util.ScreenUtils;
 import com.xt.progressbar.rangeseekbar.RangeSliderBar;
 
 public class MainActivity extends AppCompatActivity {
@@ -31,6 +35,15 @@ public class MainActivity extends AppCompatActivity {
             mRangeSliderBar.setRangeCount(5); //设置分段的个数
             mRangeSliderBar.setContext(this);
             mRangeSliderBar.setTexts(new String[]{"关闭", "低", "中", "标准", "高"}); //设置分段的数据
+        }
+        {
+            SeekBar seekBar = findViewById(R.id.seekBar5);
+            int intrinsicWidth = seekBar.getThumb().getIntrinsicWidth();
+            ConstraintLayout.LayoutParams layoutParams = (ConstraintLayout.LayoutParams) seekBar.getLayoutParams();
+            layoutParams.width = (int) (ScreenUtils.getScreenWidth() * 0.7f)+intrinsicWidth;
+            seekBar.setLayoutParams(layoutParams);
+            seekBar.setPadding(intrinsicWidth/2, 0, intrinsicWidth/2, 0);
+            seekBar.setThumbOffset(intrinsicWidth/2);
         }
     }
 }
